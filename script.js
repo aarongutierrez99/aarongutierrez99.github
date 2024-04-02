@@ -22,6 +22,12 @@ document.addEventListener('keydown', function(event) {
         if (index + columns < applications.length) { // Verificar si estamos en la última fila
             index += columns;
         }
+    } else if (key === 'Enter') { // Manejo para la tecla Enter
+        event.preventDefault(); // Evitar el comportamiento predeterminado del Enter
+        if (currentApp.classList.contains('application')) { // Verificar si el elemento enfocado es una aplicación
+            window.location.href = currentApp.href; // Seguir el enlace de la aplicación
+        }
+        return; // Salir de la función después de seguir el enlace
     }
 
     applications[index].focus();
@@ -30,7 +36,6 @@ document.addEventListener('keydown', function(event) {
     // Evitar el comportamiento predeterminado de las teclas de flecha
     event.preventDefault();
 });
-
 
 document.addEventListener('wheel', function(event) {
     const delta = Math.sign(event.deltaY);
