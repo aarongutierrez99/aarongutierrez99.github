@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('images/wallpaper/wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #121212; /* Moví el fondo oscuro aquí para aplicarlo a todo el cuerpo */
+    color: #fff; /* Color de texto predeterminado */
+}
+
+.navigation {
+    display: none; /* Ocultar completamente el menú de navegación */
+}
+
+.tv-screen {
+    margin-top: 50px;
+    background-color: transparent;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente */
+    align-content: flex-start; /* Alinea en la parte superior */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 30px;
+}
+
+.application {
+    width: 300px;
+    height: 300px;
+    margin: 30px 30px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.application img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.application.selected {
+    border: 3px solid #ccc !important; /* Cambia el color del borde a un gris más suave */
+    transform: scale(1.2);
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5) !important; /* Cambia el resplandor a un blanco con menor opacidad */
+}
+
+
+
+.application:focus {
+    outline: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.app-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 0px; /* Ajusta según sea necesario */
+}
+
+/* Ocultar la barra de desplazamiento */
+.tv-screen::-webkit-scrollbar {
+    display: none;
+}
+
+/* Para navegadores basados en WebKit como Chrome y Safari */

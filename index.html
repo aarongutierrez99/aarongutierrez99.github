@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart TV Web</title>
+    <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body class="dark-mode">
+    <div class="tv-screen">
+        <div class="app-container">
+            <!-- Accesos directos a las aplicaciones -->
+        </div>
+    </div>
+
+    <script src="script.js?v=1"></script>
+    <script>
+        function addApplications() {
+            const appContainer = document.querySelector('.app-container');
+            fetch('shortcuts.json?v=1')
+                .then(response => response.json())
+                .then(shortcuts => {
+                    shortcuts.forEach(shortcut => {
+                        const { name, url, icon } = shortcut;
+                        const application = createApplicationElement(name, url, icon);
+                        appContainer.appendChild(application);
+                    });
+                })
+                .catch(error => console.error('Error al cargar las aplicaciones:', error));
+        }
+
+        window.onload = function() {
+            addApplications();
+        };
+
+        function createApplicationElement(name, url, icon) {
+            const application = document.createElement('a');
+            application.href = url;
+            application.className = 'application';
+            application.target = '_self';
+            const image = document.createElement('img');
+            image.src = `images/icons/${icon}`; // Ajusta la extensión a .png
+            image.alt = name;
+            application.appendChild(image);
+            application.innerHTML += `<br>${name}`;
+            return application;
+        }
+    </script>
+</body>
+</html>

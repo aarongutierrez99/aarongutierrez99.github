@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Netflix",
+    "url": "https://www.netflix.com",
+    "icon": "netflix.png"
+  },
+  {
+    "name": "YouTube",
+    "url": "https://www.youtube.com",
+    "icon": "youtube.png"
+  },
+  {
+    "name": "YouTube Music",
+    "url": "https://music.youtube.com",
+    "icon": "youtubemusic.png"
+  },
+  {
+    "name": "Google",
+    "url": "https://www.google.com",
+    "icon": "google.png"
+  },
+  {
+    "name": "Disney+",
+    "url": "https://www.disneyplus.com",
+    "icon": "disney.png"
+  },
+  {
+    "name": "Star+",
+    "url": "https://www.starplus.com",
+    "icon": "star.png"
+  },
+  {
+    "name": "T-Play",
+    "url": "https://www.telecentroplay.com.ar",
+    "icon": "tplay.png"
+  }
+]
