@@ -33,5 +33,10 @@
     "name": "T-Play",
     "url": "https://www.telecentroplay.com.ar",
     "icon": "tplay.png"
-  }
+  },
+  {
+    "name": "Juegos",
+    "url": "https://www.friv.com",
+    "icon": "games.png"
+  }   
 ]
